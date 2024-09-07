@@ -114,10 +114,10 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
  8000160:	f000 f842 	bl	80001e8 <MX_GPIO_Init>
-  /* USER CODE BEGIN WHILE */
-  while (1)
   {
     /* USER CODE END WHILE */
+
+    /* USER CODE BEGIN 3 */
 	  void exercise2_run();
 	  HAL_Delay(1000);
  8000164:	f44f 707a 	mov.w	r0, #1000	@ 0x3e8
