@@ -65,7 +65,8 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-
+	void exercise2_run();
+	HAL_Delay(1000);
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -95,7 +96,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-	  exercise2_run();
+	  void exercise2_run();
 	  HAL_Delay(1000);
     /* USER CODE BEGIN 3 */
   }

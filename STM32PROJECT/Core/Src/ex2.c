@@ -14,7 +14,6 @@ void green_off(){HAL_GPIO_WritePin(Led_green_GPIO_Port, Led_green_Pin,SET);}
 
 int count = 10;
 void exercise2_run(){
-
 	if(count >5 && count <=10){
 		red_on();
 		yellow_off();
