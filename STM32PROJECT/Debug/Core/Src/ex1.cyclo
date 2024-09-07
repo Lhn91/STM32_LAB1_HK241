@@ -1,0 +1,4 @@
+../Core/Src/ex1.c:9:6:Led_on	1
+../Core/Src/ex1.c:13:6:Led_off	1
+../Core/Src/ex1.c:17:6:init_exercise1	1
+../Core/Src/ex1.c:22:6:exercise1_run	5
