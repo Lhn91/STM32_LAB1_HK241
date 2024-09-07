@@ -1,7 +1,0 @@
-../Core/Src/ex2.c:8:6:red_on	8	static
-../Core/Src/ex2.c:9:6:red_off	8	static
-../Core/Src/ex2.c:10:6:yellow_on	8	static
-../Core/Src/ex2.c:11:6:yellow_off	8	static
-../Core/Src/ex2.c:12:6:green_on	8	static
-../Core/Src/ex2.c:13:6:green_off	8	static
-../Core/Src/ex2.c:16:6:exercise2_run	8	static
