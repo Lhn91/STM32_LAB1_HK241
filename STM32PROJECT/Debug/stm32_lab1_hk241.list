@@ -112,7 +112,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-	  void exercise3_run();
+	  void exercise2_run();
 	  HAL_Delay(1000);
  800015c:	f44f 707a 	mov.w	r0, #1000	@ 0x3e8
  8000160:	f000 f954 	bl	800040c <HAL_Delay>

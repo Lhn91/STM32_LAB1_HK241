@@ -4,8 +4,8 @@
  *  Created on: Sep 7, 2024
  *      Author: 84859
  */
-//#include "ex2.h"
-/*void red_on(){HAL_GPIO_WritePin(Led_red_GPIO_Port, Led_red_Pin,RESET);}
+#include "ex2.h"
+void red_on(){HAL_GPIO_WritePin(Led_red_GPIO_Port, Led_red_Pin,RESET);}
 void red_off(){HAL_GPIO_WritePin(Led_red_GPIO_Port, Led_red_Pin,SET);}
 void yellow_on(){HAL_GPIO_WritePin(Led_yellow_GPIO_Port, Led_yellow_Pin,RESET);}
 void yellow_off(){HAL_GPIO_WritePin(Led_yellow_GPIO_Port, Led_yellow_Pin,SET);}
@@ -32,5 +32,5 @@ void exercise2_run(){
 		}
 	if(count == 1)count = 11;
 	count--;
-}*/
+}
 

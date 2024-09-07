@@ -21,7 +21,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "ex3.h"
+#include "ex2.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -95,7 +95,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-	  void exercise3_run();
+	  void exercise2_run();
 	  HAL_Delay(1000);
     /* USER CODE BEGIN 3 */
   }
