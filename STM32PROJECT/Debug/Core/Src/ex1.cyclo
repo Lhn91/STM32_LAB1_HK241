@@ -4,4 +4,4 @@
 ../Core/Src/ex1.c:72:6:setNumberOnClock	1
 ../Core/Src/ex1.c:76:6:setAllClock	1
 ../Core/Src/ex1.c:90:6:clearAllClock	1
-../Core/Src/ex1.c:108:6:runClock	7
+../Core/Src/ex1.c:108:6:runClock	5

@@ -106,26 +106,34 @@ int second = 0;
 int minute = 0;
 int hour = 0;
 void runClock(){
+
 	if(second >=60){
 		++minute;
+
+		clearNumberOnClock((minute-5)/5);
+		clearNumberOnClock((second-5)/5);
 		second = 0;
 	}
 
 	if(minute>=60){
 		++hour;
+		clearNumberOnClock(hour%12-1);
 		minute = 0;
 	}
 
 	if(hour >=12){
 		hour = 0;
 	}
-if(second % 5 == 0){
-clearAllClock();
-setNumberOnClock(second/5);
+
+	if(second%5 == 0){
+		setNumberOnClock(second/5);
+		clearNumberOnClock((second-5)/5);
+	}
 setNumberOnClock(minute/5);
 setNumberOnClock(hour%12);
+	++second;
 }
-++second;
-}
+
+
 
 
