@@ -12,7 +12,10 @@
 #define LED_ON 	1
 #define LED_OFF	0
 
-void init_exercise1();
-void exercise1_run();
+void clearAllClock();
+void setAllClock();
+void setNumberOnClock(int num);
+void clearNumberOnClock(int num);
+void runClock();
 
 #endif /* INC_EX1_H_ */
