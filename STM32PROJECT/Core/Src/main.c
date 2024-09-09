@@ -156,17 +156,23 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, red_Pin|yellow_Pin|green_Pin|red1_Pin
-                          |yellow1_Pin|green1_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, s1_Pin|s2_Pin|s3_Pin|s4_Pin
+                          |s5_Pin|s6_Pin|red_Pin|yellow_Pin
+                          |green_Pin|red1_Pin|yellow1_Pin|green1_Pin
+                          |s7_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, seg1_Pin|seg2_Pin|seg3_Pin|seg4_Pin
                           |seg5_Pin|seg6_Pin|seg7_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : red_Pin yellow_Pin green_Pin red1_Pin
-                           yellow1_Pin green1_Pin */
-  GPIO_InitStruct.Pin = red_Pin|yellow_Pin|green_Pin|red1_Pin
-                          |yellow1_Pin|green1_Pin;
+  /*Configure GPIO pins : s1_Pin s2_Pin s3_Pin s4_Pin
+                           s5_Pin s6_Pin red_Pin yellow_Pin
+                           green_Pin red1_Pin yellow1_Pin green1_Pin
+                           s7_Pin */
+  GPIO_InitStruct.Pin = s1_Pin|s2_Pin|s3_Pin|s4_Pin
+                          |s5_Pin|s6_Pin|red_Pin|yellow_Pin
+                          |green_Pin|red1_Pin|yellow1_Pin|green1_Pin
+                          |s7_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;

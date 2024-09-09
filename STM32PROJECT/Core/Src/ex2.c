@@ -19,7 +19,70 @@ void yellow1_off(){HAL_GPIO_WritePin(yellow1_GPIO_Port, yellow1_Pin,SET);}
 void green1_on(){HAL_GPIO_WritePin(green1_GPIO_Port, green1_Pin,RESET);}
 void green1_off(){HAL_GPIO_WritePin(green1_GPIO_Port,green1_Pin,SET);}
 
+void display_7s2(int num){
+	switch(num){
+	case 0:
+				 HAL_GPIO_WritePin(s1_GPIO_Port, s1_Pin, GPIO_PIN_RESET);
+				   HAL_GPIO_WritePin(s2_GPIO_Port, s2_Pin, GPIO_PIN_RESET);
+				   HAL_GPIO_WritePin(s3_GPIO_Port, s3_Pin, GPIO_PIN_RESET);
+				   HAL_GPIO_WritePin(s4_GPIO_Port, s4_Pin, GPIO_PIN_RESET);
+				   HAL_GPIO_WritePin(s5_GPIO_Port, s5_Pin, GPIO_PIN_RESET);
+				   HAL_GPIO_WritePin(s6_GPIO_Port, s6_Pin, GPIO_PIN_RESET);
+				   HAL_GPIO_WritePin(s7_GPIO_Port, s7_Pin, GPIO_PIN_SET);
 
+				   break;
+
+			 case 1:
+				 HAL_GPIO_WritePin(s2_GPIO_Port, s2_Pin, GPIO_PIN_RESET);
+				HAL_GPIO_WritePin(s3_GPIO_Port, s3_Pin, GPIO_PIN_RESET);
+
+
+				HAL_GPIO_WritePin(s1_GPIO_Port, s1_Pin, GPIO_PIN_SET);
+				  HAL_GPIO_WritePin(s4_GPIO_Port, s4_Pin, GPIO_PIN_SET);
+				  HAL_GPIO_WritePin(s5_GPIO_Port, s5_Pin, GPIO_PIN_SET);
+				  HAL_GPIO_WritePin(s6_GPIO_Port, s6_Pin, GPIO_PIN_SET);
+				  HAL_GPIO_WritePin(s7_GPIO_Port, s7_Pin, GPIO_PIN_SET);
+
+				  break;
+
+
+			 case 2:
+				 HAL_GPIO_WritePin(s1_GPIO_Port, s1_Pin, GPIO_PIN_RESET);
+						   HAL_GPIO_WritePin(s2_GPIO_Port, s2_Pin, GPIO_PIN_RESET);
+						   HAL_GPIO_WritePin(s4_GPIO_Port, s4_Pin, GPIO_PIN_RESET);
+						  		   HAL_GPIO_WritePin(s5_GPIO_Port, s5_Pin, GPIO_PIN_RESET);
+						  		 HAL_GPIO_WritePin(s7_GPIO_Port, s7_Pin, GPIO_PIN_RESET);
+
+
+
+						  		  HAL_GPIO_WritePin(s3_GPIO_Port, s3_Pin, GPIO_PIN_SET);
+						  		  HAL_GPIO_WritePin(s6_GPIO_Port, s6_Pin, GPIO_PIN_SET);
+						  		  break;
+
+			 case 3:
+				 HAL_GPIO_WritePin(s1_GPIO_Port, s1_Pin, GPIO_PIN_RESET);
+						   HAL_GPIO_WritePin(s2_GPIO_Port, s2_Pin, GPIO_PIN_RESET);
+						   HAL_GPIO_WritePin(s3_GPIO_Port, s3_Pin, GPIO_PIN_RESET);
+						   HAL_GPIO_WritePin(s4_GPIO_Port, s4_Pin, GPIO_PIN_RESET);
+						   HAL_GPIO_WritePin(s5_GPIO_Port, s5_Pin, GPIO_PIN_SET);
+						   HAL_GPIO_WritePin(s6_GPIO_Port, s6_Pin, GPIO_PIN_SET);
+						   HAL_GPIO_WritePin(s7_GPIO_Port, s7_Pin, GPIO_PIN_RESET);
+						   break;
+
+
+			 case 4:
+				 HAL_GPIO_WritePin(s1_GPIO_Port, s1_Pin, GPIO_PIN_SET);
+						   HAL_GPIO_WritePin(s2_GPIO_Port, s2_Pin, GPIO_PIN_RESET);
+						   HAL_GPIO_WritePin(s3_GPIO_Port, s3_Pin, GPIO_PIN_RESET);
+						   HAL_GPIO_WritePin(s4_GPIO_Port, s4_Pin, GPIO_PIN_SET);
+						   HAL_GPIO_WritePin(s5_GPIO_Port, s5_Pin, GPIO_PIN_SET);
+						   HAL_GPIO_WritePin(s6_GPIO_Port, s6_Pin, GPIO_PIN_RESET);
+						   HAL_GPIO_WritePin(s7_GPIO_Port, s7_Pin, GPIO_PIN_RESET);
+
+						   break;
+
+	}
+}
 void display_7seg(int num){
 	switch(num){
 		 case 0:
@@ -140,9 +203,11 @@ void display_7seg(int num){
 }
 int count = 10;
 int num[10] = {4, 3, 2, 1, 0, 2, 1, 0, 1, 0};
+int num2[10] = {2, 1, 0, 1, 0, 4, 3, 2, 1, 0};
 void exercise2_run(){
 
 	display_7seg(num[10 - count]);
+	display_7s2(num2[10 - count]);
 	//den1
 	if(count >5 && count <=10){
 		red_off();
