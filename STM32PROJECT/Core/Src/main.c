@@ -92,12 +92,26 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  int i = 0;
   while (1)
   {
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+	 if(i==0){
+setAllClock();
+HAL_Delay(2000);
 
+clearAllClock();
+HAL_Delay(2000);
+
+setNumberOnClock(6);
+HAL_Delay(2000);
+
+clearNumberOnClock(6);
+HAL_Delay(2000);
+ i = 1;
+	 }
 runClock();
 HAL_Delay(100);
   }
